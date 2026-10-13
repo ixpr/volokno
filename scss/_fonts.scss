@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Monument Grotesk';
+    src: url('../fonts/ABCMonumentGroteskCyrillicSemiMono-Regular.eot');
+    src: url('../fonts/ABCMonumentGroteskCyrillicSemiMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ABCMonumentGroteskCyrillicSemiMono-Regular.woff2') format('woff2'),
+        url('../fonts/ABCMonumentGroteskCyrillicSemiMono-Regular.woff') format('woff'),
+        url('../fonts/ABCMonumentGroteskCyrillicSemiMono-Regular.ttf') format('truetype'),
+        url('../fonts/ABCMonumentGroteskCyrillicSemiMono-Regular.svg#ABCMonumentGroteskCyrillicSemiMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-Regular.eot');
+    src: url('../fonts/Spectral-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Spectral-Regular.woff2') format('woff2'),
+        url('../fonts/Spectral-Regular.woff') format('woff'),
+        url('../fonts/Spectral-Regular.ttf') format('truetype'),
+        url('../fonts/Spectral-Regular.svg#Spectral-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

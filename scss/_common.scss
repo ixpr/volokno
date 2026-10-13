@@ -1,0 +1,260 @@
+$wideDesktopBkpoint: 1512px;
+$wideDesktopBkpointMin: 1513px;
+$tabletBkpoint: 1099px;
+$tabletBkpointMin: 1100px;
+$mobileBkpoint: 767px;
+$mobileBkpointMin: 768px;
+
+$sliderHeightDesktop: 900px;
+$sliderHeightMobile: 645px;
+$sliderHeightWideDesktop: 59.52vw;
+
+$sliderHeightDesktopInner: 900px;
+$sliderHeightMobileInner: 492px;
+$sliderHeightWideDesktopInner: 59.52vw;
+
+/* colors */
+
+$highlightColor: #E9B910;
+$fullBlackColor: #000000;
+$voloknoBlackColor: #0E0E10;
+$voloknoGreyColor: #A0A2A9;
+$voloknoBeigeColor: #F3F1ED;
+$voloknoRedColor: #A63838;
+
+/* font */
+
+@mixin font-monument {
+  font-family: 'Monument Grotesk', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: $fullBlackColor;
+  line-height: 142%;
+  letter-spacing: 8%;
+  text-transform: uppercase;
+  @media screen and (max-width: $mobileBkpoint) {
+    font-size: 10px;
+    letter-spacing: 10%;
+  }
+}
+
+@mixin font-monument-mobile-menu {
+  @media screen and (max-width: $mobileBkpoint) {
+    font-size: 12px;
+    letter-spacing: 8%;
+  }
+}
+
+@mixin font-spectral-large {
+  font-size: 32px;
+  line-height: 117%;
+  letter-spacing: -2%;
+  @media screen and (max-width: $mobileBkpoint) {
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+
+@mixin font-spectral-small {
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+/* flex */
+
+@mixin flex-start-start {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+@mixin flex-start-center {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin flex-start-end {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+@mixin flex-end-end {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+@mixin flex-space-start {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+@mixin flex-space-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-space-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+@mixin flex-space-baseline {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-start {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+/* background */
+
+@mixin background-contain {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+@mixin background-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@mixin background-auto {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+
+@mixin background-top {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+@mixin background-bottom {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+@mixin background-contain-bottom {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+@mixin background-contain-left {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+@mixin background-cover-left {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+}
+
+@mixin background-cover-center {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@mixin background-left {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto;
+}
+
+@mixin background-repeat-x {
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-size: auto;
+}
+
+@mixin background-stretch {
+  background-size: 100%;
+  background-position: center;
+}
+
+/* other */
+
+@mixin overflow-x-no-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+@mixin popup-effects {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* animations */
+
+@mixin rotate-y-animation {
+  animation: rotate-y 2s ease-out both;
+  animation-delay: 0s;
+  will-change: auto;
+}
+
+@keyframes rotate-y {
+  0% {transform: rotateX(0deg);}
+  100% {transform: rotateX(180deg);}
+}
+
+@mixin minicart-title-animation {
+  animation: minicart-title 1s ease-out both;
+  animation-delay: 0s;
+  will-change: auto;
+}
+
+@keyframes minicart-title {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(7.75deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@mixin minicart-title-animation-mobile {
+  animation: minicart-title-mobile 1s ease-out both;
+  animation-delay: 0s;
+  will-change: auto;
+}
+
+@keyframes minicart-title-mobile {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(-8.71deg);}
+  100% {transform: rotate(0deg);}
+}

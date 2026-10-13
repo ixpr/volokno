@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/slick.min.js" defer></script>
+    <script src="js/jquery.maskedinput.min.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <a class="main-header__logo" href="index.html"></a>
+        <div class="main-header__menu">
+            <ul>
+                <li><a href="catalog.html">каталог</a></li>
+                <li><a href="authors.html">авторы</a></li>
+                <li><a href="projects.html">проекты</a></li>
+                <li><a href="textile.html">текстиль</a></li>
+                <li><a href="news.html">новости</a></li>
+                <li><a href="about.html">о нас</a></li>
+            </ul>
+            <a class="main-header__menu__symbol" href="index.html"></a>
+        </div>
+        <div class="main-header__mobile-header">
+            <a class="main-header__mobile-header__symbol" href="index.html"></a>
+            <span class="main-header__mobile-header__burger" data-menu-open="mobile-menu"></span>
+        </div>
+        <div class="main-header__mobile-menu" data-menu="mobile-menu">
+            <div class="main-header__mobile-menu__header">
+                <span class="main-header__mobile-menu__header__close" data-menu-close></span>
+            </div>
+            <div class="main-header__mobile-menu__body">
+                <div class="main-header__mobile-menu__body__items">
+                    <ul>
+                        <li><a href="about.html">о нас</a></li>
+                        <li><a href="textile.html">текстиль</a></li>
+                        <li><a href="catalog.html">каталог</a></li>
+                        <li><a href="news.html">новости</a></li>
+                        <li><a href="projects.html">проекты</a></li>
+                    </ul>
+                </div>
+                <div class="main-header__mobile-menu__body__contacts">
+                    <p>
+                        <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
+                        <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
+                    </p>
+                    <p>
+                        Москва, ул. Плющиха, 53 с1<br>
+                        пн-пт с 10:00 до 19:00
+                    </p>
+                    <p>
+                        <a href="#">проложить маршрут</a>
+                    </p>
+                    <p>
+                        <a href="">телеграм-канал</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="product-single">
+            <div class="product-single__main">
+                <ul class="product-single__main__breadcrumbs breadcrumbs-list">
+                    <li>каталог</li>
+                    <li>предметы интерьера </li>
+                </ul>
+                <div class="product-single__main__info">
+                    <div class="product-single__main__info__author">Иракли Зария</div>
+                    <div class="product-single__main__info__title">— Авторское кресло, обитое кожей Holland & Sherry Blue</div>
+                    <div class="product-single__main__info__price">
+                        <div class="product-single__main__info__price__value">980 000 ₽</div>
+                        <div class="product-single__main__info__price__options">30 | 30 | 100 000</div>
+                    </div>
+                    <div class="product-single__main__info__request">
+                        <span class="button button--white" data-drawer-open="request">оставить заявку</span>
+                    </div>
+                </div>
+                <div class="product-single__main__desc">
+                    <p>Кресло с характером и без лишних слов. Строгая геометрия корпуса, зауженные ножки из металла с матовым покрытием, кожа Holland & Sherry — один из немногих материалов, который становится лучше с годами. Подходит для кабинета, гостиной или любого пространства, где важна не только форма.</p>
+                    <p>Доступно в трёх цветах. Под заказ — до 8 недель.</p>
+                </div>
+                <div class="product-single__main__related volblock volblock--horiz-items volblock--horiz-items-sm">
+                    <div class="volblock--horiz-items__title">другие обивки</div>
+                    <div class="volblock--horiz-items__list">
+                        <div class="volblock--horiz-items__list__item">
+                            <div class="volblock--horiz-items__list__item__pic">
+                                <a href="#"><img src="img/product_related_1.jpg" alt="related"></a>
+                            </div>
+                            <div class="volblock--horiz-items__list__item__info">
+                                <p class="volblock--horiz-items__list__item__info__title">кожа holland & sherry blue</p>
+                                <p class="volblock--horiz-items__list__item__info__price">980 000 ₽ </p>
+                            </div>
+                        </div>
+                        <div class="volblock--horiz-items__list__item">
+                            <div class="volblock--horiz-items__list__item__pic">
+                                <a href="#"><img src="img/product_related_2.jpg" alt="related"></a>
+                            </div>
+                            <div class="volblock--horiz-items__list__item__info">
+                                <p class="volblock--horiz-items__list__item__info__title">кожа holland & bottle green</p>
+                                <p class="volblock--horiz-items__list__item__info__price">980 000 ₽ </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-single__main__author volblock volblock--horiz-items">
+                    <div class="volblock--horiz-items__title">об авторе</div>
+                    <div class="volblock--horiz-items__list">
+                        <div class="volblock--horiz-items__list__item">
+                            <div class="volblock--horiz-items__list__item__pic">
+                                <img src="img/product_author.jpg" alt="author">
+                            </div>
+                            <div class="volblock--horiz-items__list__item__info">
+                                <p class="volblock--horiz-items__list__item__info__title">Иракли Зария</p>
+                                <p class="volblock--horiz-items__list__item__info__desc">Московский дизайнер грузинского происхождения. Мебель на границе скульптуры и функции — с собственным авторским языком.</p>
+                                <div class="volblock--horiz-items__list__item__info__link">
+                                    <a class="link" href="#">страница автора</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-single__gallery slider-wrapper">
+                <div class="slider-placeholder">
+                    <img src="img/product_gallery_1.jpg" alt="Загрузка...">
+                </div>
+                <div class="gallery-slider slider-loading">
+                    <div class="product-single__gallery__slide" data-thumb="img/product_gallery_1.jpg">
+                        <img src="img/product_gallery_1.jpg" alt="gallery">
+                    </div>
+                    <div class="product-single__gallery__slide" data-thumb="img/product_gallery_2.jpg">
+                        <img src="img/product_gallery_2.jpg" alt="gallery">
+                    </div>
+                    <div class="product-single__gallery__slide" data-thumb="img/product_gallery_3.jpg">
+                        <img src="img/product_gallery_3.jpg" alt="gallery">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-featured">
+            <ul class="product-featured__title breadcrumbs-list">
+                <li>каталог</li>
+                <li>ираклий зария</li>
+            </ul>
+            <ul class="product-featured__list products-list products-list--featured featured-slider">
+                <li class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="#">
+                            <img src="img/product_1.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        иракли зария 
+                    </div>
+                    <div class="products-list__item__title">
+                        — столик в технике маркетри 
+                    </div>
+                    <div class="products-list__item__price">
+                        800 000 ₽ 
+                    </div>
+                </li>
+                <li class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="#">
+                            <img src="img/product_2.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        иракли зария 
+                    </div>
+                    <div class="products-list__item__title">
+                        — столик в технике маркетри 
+                    </div>
+                    <div class="products-list__item__price">
+                        100 000 ₽
+                    </div>
+                </li>
+                <li class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="#">
+                            <img src="img/product_3.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        кристина агельская 
+                    </div>
+                    <div class="products-list__item__title">
+                        — rust and blue, 2026
+                    </div>
+                    <div class="products-list__item__price">
+                        100 000 ₽
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="product-request vol-drawer" data-drawer="request">
+            <div class="product-request__desc">
+                <p>Оставьте свои контактные данные, и мы с вами свяжемся в ближайшее время. </p>
+            </div>
+            <form class="product-request__form" action="#">
+                <div class="product-request__form__field">
+                    <label for="req_name">ВАШЕ ИМЯ</label>
+                    <input type="text" name="req_name" id="req_name" placeholder="Введите имя">
+                </div>
+                <div class="product-request__form__field">
+                    <label for="req_email">ПОЧТА</label>
+                    <input type="text" name="req_email" id="req_email" placeholder="name@email.com">
+                </div>
+                <div class="product-request__form__field">
+                    <label for="req_phone">ТЕЛЕФОН</label>
+                    <input type="text" name="req_phone" id="req_phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="product-request__form__submit">
+                    <input type="submit" value="отправить данные">
+                </div>
+                <div class="product-request__form__success hidden">
+                    <p>
+                        Данные отправлены! <br>
+                        <span>Спасибо! Мы свяжемся с вами в ближайшее время.</span>
+                    </p>
+                    <span class="button" data-drawer-close>Закрыть</span>
+                </div>
+                <div class="product-request__form__consent">
+                    Нажимая на кнопку, вы подтверждаете свое согласие с нашей политикой конфиденциальности и условиями использования. Мы ценим вашу безопасность и готовы ответить на все ваши вопросы!
+                </div>
+            </form>
+        </div>
+        <div class="vol-drawer-overlay" data-drawer-close></div>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__blocks">
+            <div class="main-footer__block main-footer__block--contacts">
+                <div class="main-footer__block__title">
+                    Контакты
+                </div>
+                <div class="main-footer__block__body">
+                    <p>
+                        <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
+                        <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
+                    </p>
+                    <p>
+                        Москва, ул. Плющиха, 53/25с1 <br class="hidden-desktop"> этаж 1, <br class="hidden-mobile">
+                        пн-пт с 10:00 до 19:00
+                    </p>
+                    <p>
+                        <a href="#">проложить маршрут</a>
+                    </p>
+                    <p>
+                        <a href="">телеграм-канал</a>
+                    </p>
+                </div>
+            </div>
+            <div class="main-footer__block main-footer__block--documents">
+                <div class="main-footer__block__title">
+                    Документы
+                </div>
+                <div class="main-footer__block__body">
+                    <p>
+                        <a href="#">пользовательское соглашение</a> <br>
+                        <a href="#">Политика конфиденциальности</a> <br>
+                        <a href="#">публичная Оферта</a>
+                    </p>
+                    <p>
+                        ооо “волокно” <br>
+                        ИНН 781697491441 <br>
+                        ОГРН 1227700448315
+                    </p>
+                </div>
+            </div>
+            <div class="main-footer__block main-footer__block--newsletter">
+                <div class="main-footer__block__title">
+                    Подписаться на новости
+                </div>
+                <div class="main-footer__block__body">
+                    <form class="newsletter-form" action="#">
+                        <div class="newsletter-form__fields">
+                            <input type="text" name="email" placeholder="ваш e-mail">
+                            <input type="submit" name="submit" value="оставить заявку">
+                        </div>
+                        <div class="newsletter-form__consent">
+                            Нажимая «Подписаться», вы принимаете нашу <a href="#">Политику конфиденциальности</a>.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer__copyright">
+            © 2026 volokno design
+        </div>
+        <div class="cookies-notice hidden">
+            <p>На сайте используются куки-файлы. Оставаясь на сайте, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a> и <a href="#">обработки персональных данных</a>.</p>
+            <span class="cookies-notice__accept button button--transparent button--bordered">согласен</span>
+        </div>
+    </footer>
+</body>
+</html>
