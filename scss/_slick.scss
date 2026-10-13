@@ -404,3 +404,20 @@
     }
   }
 }
+
+/* remove flickering */
+.featured-slider.slick-slider, 
+.news-slider.slick-slider, 
+.featured-slider.slick-slider .slick-list, 
+.news-slider.slick-slider .slick-list, 
+.featured-slider.slick-slider .slick-track, 
+.news-slider.slick-slider .slick-track, 
+.featured-slider.slick-slider .slick-slide,
+.news-slider.slick-slider .slick-slide {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}

@@ -283,7 +283,8 @@ jQuery(document).ready(function ($) {
               infinite: false,
               fade: false,
               arrows: false,
-              dots: false
+              dots: false,
+              respondTo: 'slider'
           });
         }
     }
@@ -305,7 +306,8 @@ jQuery(document).ready(function ($) {
               infinite: false,
               fade: false,
               arrows: false,
-              dots: false
+              dots: false,
+              respondTo: 'slider'
           });
         }
     }
