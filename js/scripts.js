@@ -61,26 +61,7 @@ jQuery(document).ready(function ($) {
     gallerySlider.on('init', function(event, slick){
       $(this).removeClass('slider-loading');
       checkSlideBg(slick, 0);
-
-      gallerySlider.find('img')
-      .each(function () {
-        var img = $(this);
-
-        function checkOrientation(image) {
-          if (image.naturalHeight > image.naturalWidth) {
-            img.addClass('is-vertical').removeClass('is-horizontal');
-          } else {
-            img.addClass('is-horizontal').removeClass('is-vertical');
-          }
-        }
-
-        if (this.complete) {
-          checkOrientation(this);
-          img.on('load', function () {
-            checkOrientation(this);
-          });
-        }
-      });
+      processSliderImages(gallerySlider);
     });
     gallerySlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
       checkSlideBg(slick, nextSlide);
@@ -89,6 +70,9 @@ jQuery(document).ready(function ($) {
   }
 
   if (homeInnerSlider.length && isMobileView()) {
+    homeInnerSlider.on('init', function(event, slick){
+      processSliderImages(homeInnerSlider);
+    });
     homeInnerSlider.slick(slickParamsGallery);
   }
 
