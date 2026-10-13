@@ -7,18 +7,18 @@ jQuery(document).ready(function ($) {
   fixedHeader();
 
   // sliders
+  const homeSlider = $('.home-slider');
+  const gallerySlider = $('.gallery-slider');
+  const homeInnerSlider = $('.home-inner-slider');
+
   homeSlider.find('img')
   .add(homeInnerSlider.find('img'))
   .add(gallerySlider.find('img'))
   .add('.slider-placeholder img')
   .each(function () {
-    const img = $(this);
-    const nativeImg = this;
+    var img = $(this);
 
     function checkOrientation(image) {
-      // Защита: если размеры еще 0 (картинка не загружена), ничего не делаем
-      if (image.naturalWidth === 0 || image.naturalHeight === 0) return;
-
       if (image.naturalHeight > image.naturalWidth) {
         img.addClass('is-vertical').removeClass('is-horizontal');
       } else {
@@ -26,14 +26,11 @@ jQuery(document).ready(function ($) {
       }
     }
 
-    // 1. Всегда вешаем обработчик на случай, если картинка загрузится позже
-    img.on('load', function () {
+    if (this.complete) {
       checkOrientation(this);
-    });
-
-    // 2. Если картинка КЭШИРОВАНА или уже загружена, проверяем её сразу
-    if (nativeImg.complete) {
-      checkOrientation(nativeImg);
+      img.on('load', function () {
+        checkOrientation(this);
+      });
     }
   });
 
@@ -55,6 +52,26 @@ jQuery(document).ready(function ($) {
     homeSlider.on('init', function(event, slick){
       $(this).removeClass('slider-loading');
       checkSlideBg(slick, 0);
+
+      homeSlider.find('img')
+      .each(function () {
+        var img = $(this);
+
+        function checkOrientation(image) {
+          if (image.naturalHeight > image.naturalWidth) {
+            img.addClass('is-vertical').removeClass('is-horizontal');
+          } else {
+            img.addClass('is-horizontal').removeClass('is-vertical');
+          }
+        }
+
+        if (this.complete) {
+          checkOrientation(this);
+          img.on('load', function () {
+            checkOrientation(this);
+          });
+        }
+      });
     });
     homeSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
       checkSlideBg(slick, nextSlide);
@@ -66,6 +83,26 @@ jQuery(document).ready(function ($) {
     gallerySlider.on('init', function(event, slick){
       $(this).removeClass('slider-loading');
       checkSlideBg(slick, 0);
+
+      gallerySlider.find('img')
+      .each(function () {
+        var img = $(this);
+
+        function checkOrientation(image) {
+          if (image.naturalHeight > image.naturalWidth) {
+            img.addClass('is-vertical').removeClass('is-horizontal');
+          } else {
+            img.addClass('is-horizontal').removeClass('is-vertical');
+          }
+        }
+
+        if (this.complete) {
+          checkOrientation(this);
+          img.on('load', function () {
+            checkOrientation(this);
+          });
+        }
+      });
     });
     gallerySlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
       checkSlideBg(slick, nextSlide);
