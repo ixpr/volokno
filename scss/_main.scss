@@ -376,7 +376,7 @@ label[for] + textarea {
     .main-header__mobile-menu__body {
       @include flex-space-center;
       flex-direction: column;
-      height: auto;
+      height: calc(100% - 48px);
       gap: 50px;
       @include font-monument;
       @include font-monument-mobile-menu;
