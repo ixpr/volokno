@@ -11,10 +11,7 @@ jQuery(document).ready(function ($) {
   const gallerySlider = $('.gallery-slider');
   const homeInnerSlider = $('.home-inner-slider');
 
-  homeSlider.find('img')
-  .add(homeInnerSlider.find('img'))
-  .add(gallerySlider.find('img'))
-  .add('.slider-placeholder img')
+  $('.slider-placeholder img')
   .each(function () {
     var img = $(this);
 
@@ -52,26 +49,7 @@ jQuery(document).ready(function ($) {
     homeSlider.on('init', function(event, slick){
       $(this).removeClass('slider-loading');
       checkSlideBg(slick, 0);
-
-      homeSlider.find('img')
-      .each(function () {
-        var img = $(this);
-
-        function checkOrientation(image) {
-          if (image.naturalHeight > image.naturalWidth) {
-            img.addClass('is-vertical').removeClass('is-horizontal');
-          } else {
-            img.addClass('is-horizontal').removeClass('is-vertical');
-          }
-        }
-
-        if (this.complete) {
-          checkOrientation(this);
-          img.on('load', function () {
-            checkOrientation(this);
-          });
-        }
-      });
+      processSliderImages(homeSlider);
     });
     homeSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
       checkSlideBg(slick, nextSlide);
@@ -113,6 +91,42 @@ jQuery(document).ready(function ($) {
   if (homeInnerSlider.length && isMobileView()) {
     homeInnerSlider.slick(slickParamsGallery);
   }
+
+
+
+    // 1. Функция для проверки ориентации одной картинки
+  function checkOrientation(imgElement) {
+    const $img = $(imgElement);
+    // Если картинка еще не имеет размеров, пропускаем шаг
+    if (imgElement.naturalWidth === 0 || imgElement.naturalHeight === 0) return;
+
+    if (imgElement.naturalHeight > imgElement.naturalWidth) {
+      $img.addClass('is-vertical').removeClass('is-horizontal');
+    } else {
+      $img.addClass('is-horizontal').removeClass('is-vertical');
+    }
+  }
+
+  // 2. Функция, которая обработает все картинки внутри конкретного слайдера
+  function processSliderImages($sliderElement) {
+    // Ищем картинки внутри слайдера (включая клонированные Slick-ом элементы)
+    const $images = $sliderElement.find('img, .slider-placeholder img');
+
+    $images.each(function () {
+      const imgElement = this;
+
+      if (imgElement.complete) {
+        // Если картинка уже загружена/в кэше
+        checkOrientation(imgElement);
+      } else {
+        // Если картинка на GitHub Pages еще догружается из сети
+        $(imgElement).off('load').on('load', function () {
+          checkOrientation(imgElement);
+        });
+      }
+    });
+  }
+  
 
   const slickParamsAuthors = {
     slidesToShow: 1,
