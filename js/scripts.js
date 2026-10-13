@@ -7,18 +7,18 @@ jQuery(document).ready(function ($) {
   fixedHeader();
 
   // sliders
-  const homeSlider = $('.home-slider');
-  const gallerySlider = $('.gallery-slider');
-  const homeInnerSlider = $('.home-inner-slider');
-
   homeSlider.find('img')
   .add(homeInnerSlider.find('img'))
   .add(gallerySlider.find('img'))
   .add('.slider-placeholder img')
   .each(function () {
-    var img = $(this);
+    const img = $(this);
+    const nativeImg = this;
 
     function checkOrientation(image) {
+      // Защита: если размеры еще 0 (картинка не загружена), ничего не делаем
+      if (image.naturalWidth === 0 || image.naturalHeight === 0) return;
+
       if (image.naturalHeight > image.naturalWidth) {
         img.addClass('is-vertical').removeClass('is-horizontal');
       } else {
@@ -26,11 +26,14 @@ jQuery(document).ready(function ($) {
       }
     }
 
-    if (this.complete) {
+    // 1. Всегда вешаем обработчик на случай, если картинка загрузится позже
+    img.on('load', function () {
       checkOrientation(this);
-      img.on('load', function () {
-        checkOrientation(this);
-      });
+    });
+
+    // 2. Если картинка КЭШИРОВАНА или уже загружена, проверяем её сразу
+    if (nativeImg.complete) {
+      checkOrientation(nativeImg);
     }
   });
 
