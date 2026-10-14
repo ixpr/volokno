@@ -202,7 +202,7 @@ label[for] {
   display: block;
   margin-bottom: 7px;
   color: $voloknoBlackColor;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   opacity: 0.6;
 }
 
@@ -585,20 +585,24 @@ body.header-fixed.dark-bg {
 .volblock--text-spaced {
   @include flex-space-start;
   padding: 60px 30px 57px;
-  gap: 60px;
   @media screen and (max-width: $mobileBkpoint) {
     display: block;
     padding: 30px 20px;
   }
   .volblock--text-spaced__title {
+    width: 50%;
     @include font-spectral-large;
     text-transform: uppercase;
     @media screen and (max-width: $mobileBkpoint) {
+      width: 100%;
       margin-bottom: 20px;
     }
   }
   .volblock--text-spaced__main {
-    max-width: 717px;
+    width: 50%;
+    @media screen and (max-width: $mobileBkpoint) {
+      width: 100%;
+    }
     p {
       @include font-spectral-large;
     }
@@ -607,7 +611,7 @@ body.header-fixed.dark-bg {
     @include flex-start-center;
     margin-top: 33px;
     padding: 5px 0;
-    letter-spacing: 8%;
+    letter-spacing: 0.08em;
     @media screen and (max-width: $mobileBkpoint) {
       margin-top: 21px;
       padding: 6px 0;
@@ -669,7 +673,7 @@ body.header-fixed.dark-bg {
     }
     .volblock--horiz-items__list__item__info__desc {
       max-width: 224px;
-      letter-spacing: 4%;
+      letter-spacing: 0.04em;
       text-transform: none;
       @media screen and (max-width: $mobileBkpoint) {
         max-width: 180px;
@@ -696,7 +700,7 @@ body.header-fixed.dark-bg {
   @include flex-start-start;
   @include font-monument;
   li {
-    letter-spacing: 10%;
+    letter-spacing: 0.1em;
     &:after {
       content: "/";
       margin: 0 0.6em;
@@ -802,7 +806,7 @@ body.header-fixed.dark-bg {
       @include font-spectral-small;
       @media screen and (max-width: $mobileBkpoint) {
         margin-bottom: 20px;
-        letter-spacing: -2%;
+        letter-spacing: -0.02em;
       }
     }
     .news-list__item__date {
@@ -858,11 +862,10 @@ body.header-fixed.dark-bg {
   padding: 30px 30px 32px;
   @include font-monument;
   background-color: #FFF;
-  @media screen and (max-width: 1499px) {
-    width: 742px;
-  }
   @media screen and (max-width: $mobileBkpoint) {
+    left: 0;
     width: 100%;
+    max-width: 100%;
     text-transform: none;
   }
   .cookies-notice__accept {
@@ -883,7 +886,7 @@ body.header-fixed.dark-bg {
   top: 0;
   left: 0;
   width: 50%;
-  max-width: 690px;
+  max-width: 750px;
   height: 100%;
   min-height: 100%;
   padding: 66px 251px 53px 60px;
@@ -1001,13 +1004,13 @@ body.header-fixed.dark-bg {
     margin: 34px auto 0;
     max-width: 716px;
     @include font-monument;
-    letter-spacing: 4%;
+    letter-spacing: 0.04em;
     text-transform: none;
     text-align: center;
     @media screen and (max-width: $mobileBkpoint) {
       margin: 0;
       padding: 30px 20px 30px;
-      letter-spacing: 6%;
+      letter-spacing: 0.06em;
     }
   }
   .manufacture__link {
@@ -1061,7 +1064,7 @@ body.header-fixed.dark-bg {
     @media screen and (max-width: $mobileBkpoint) {
       width: 100%;
       padding: 10px 10px 32px 20px;
-      letter-spacing: -2%;
+      letter-spacing: -0.02em;
     }
     span {
       display: inline-block;
@@ -1127,7 +1130,7 @@ body.header-fixed.dark-bg {
         max-width: 216px;
         @media screen and (max-width: $mobileBkpoint) {
           max-width: 180px;
-          letter-spacing: 6%;
+          letter-spacing: 0.06em;
         }
       }
     }
@@ -1240,7 +1243,7 @@ body.header-fixed.dark-bg {
         }
         &:hover {
           height: auto;
-          overflow: none;
+          overflow: hidden;
         }
       }
     }
@@ -1287,11 +1290,11 @@ body.header-fixed.dark-bg {
       }
     }
     .product-single__main__info__author {
-      letter-spacing: -2%;
+      letter-spacing: -0.02em;
     }
     .product-single__main__info__title {
       margin-bottom: 20px;
-      letter-spacing: -2%;
+      letter-spacing: -0.02em;
       @media screen and (max-width: $mobileBkpoint) {
         margin-bottom: 20px;
       }
@@ -1311,7 +1314,7 @@ body.header-fixed.dark-bg {
       margin-bottom: 100px;
       max-width: 474px;
       line-height: 140%;
-      letter-spacing: -2%;
+      letter-spacing: -0.02em;
       @media screen and (max-width: $mobileBkpoint) {
         padding-top: 20px;
         margin-bottom: 60px;
@@ -1351,7 +1354,7 @@ body.header-fixed.dark-bg {
           .volblock--horiz-items__list__item__info__desc {
             @media screen and (max-width: $mobileBkpoint) {
               max-width: 100%;
-              letter-spacing: 6%;
+              letter-spacing: 0.06em;
             }
           }
           .volblock--horiz-items__list__item__info__link {
@@ -1415,7 +1418,7 @@ body.header-fixed.dark-bg {
   .product-request__form__consent {
     margin-top: 52px;
     text-transform: none;
-    letter-spacing: 4%;
+    letter-spacing: 0.04em;
   }
   .product-request__form__success {
     width: 100%;
@@ -1424,7 +1427,7 @@ body.header-fixed.dark-bg {
       margin-bottom: 40px;
       span {
         text-transform: none;
-        letter-spacing: 4%;
+        letter-spacing: 0.04em;
       }
     }
     .button {

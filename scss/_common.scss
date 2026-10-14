@@ -30,25 +30,25 @@ $voloknoRedColor: #A63838;
   font-size: 12px;
   color: $fullBlackColor;
   line-height: 142%;
-  letter-spacing: 8%;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   @media screen and (max-width: $mobileBkpoint) {
     font-size: 10px;
-    letter-spacing: 10%;
+    letter-spacing: 0.1em;
   }
 }
 
 @mixin font-monument-mobile-menu {
   @media screen and (max-width: $mobileBkpoint) {
     font-size: 12px;
-    letter-spacing: 8%;
+    letter-spacing: 0.08em;
   }
 }
 
 @mixin font-spectral-large {
   font-size: 32px;
   line-height: 117%;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   @media screen and (max-width: $mobileBkpoint) {
     font-size: 20px;
     line-height: 120%;
@@ -58,7 +58,7 @@ $voloknoRedColor: #A63838;
 @mixin font-spectral-small {
   font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
+  letter-spacing: 0em;
 }
 
 /* flex */

@@ -30,7 +30,6 @@
 
   &.dragging {
     cursor: pointer;
-    cursor: hand;
   }
 }
 
@@ -417,8 +416,8 @@
 .news-slider.slick-slider .slick-slide {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }

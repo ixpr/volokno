@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/slick.min.js" defer></script>
+    <script src="js/jquery.maskedinput.min.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <a class="main-header__logo" href="index.html"></a>
+        <div class="main-header__menu">
+            <ul>
+                <li><a href="catalog.html">каталог</a></li>
+                <li><a href="authors.html">авторы</a></li>
+                <li><a href="projects.html">проекты</a></li>
+                <li><a href="textile.html">текстиль</a></li>
+                <li><a href="news.html">новости</a></li>
+                <li><a href="about.html">о нас</a></li>
+            </ul>
+            <a class="main-header__menu__symbol" href="index.html"></a>
+        </div>
+        <div class="main-header__mobile-header">
+            <a class="main-header__mobile-header__symbol" href="index.html"></a>
+            <span class="main-header__mobile-header__burger" data-menu-open="mobile-menu"></span>
+        </div>
+        <div class="main-header__mobile-menu" data-menu="mobile-menu">
+            <div class="main-header__mobile-menu__header">
+                <a class="main-header__mobile-menu__header__symbol" href="index.html"></a>
+                <span class="main-header__mobile-menu__header__close" data-menu-close></span>
+            </div>
+            <div class="main-header__mobile-menu__body">
+                <div class="main-header__mobile-menu__body__items">
+                    <ul>
+                        <li><a href="about.html">о нас</a></li>
+                        <li><a href="textile.html">текстиль</a></li>
+                        <li><a href="catalog.html">каталог</a></li>
+                        <li><a href="news.html">новости</a></li>
+                        <li><a href="projects.html">проекты</a></li>
+                    </ul>
+                </div>
+                <div class="main-header__mobile-menu__body__contacts">
+                    <p>
+                        <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
+                        <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
+                    </p>
+                    <p>
+                        Москва, ул. Плющиха, 53 с1<br>
+                        пн-пт с 10:00 до 19:00
+                    </p>
+                    <p>
+                        <a href="#">проложить маршрут</a>
+                    </p>
+                    <p>
+                        <a href="">телеграм-канал</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="vol-slider slider-wrapper home-slider-wrapper">
+            <div class="slider-placeholder">
+                <img src="img/slide_1.jpg" alt="Загрузка...">
+            </div>
+            <div class="home-slider slider-loading">
+                <div class="home-slider__slide bg-dark" data-thumb="img/slide_1.jpg">
+                    <img src="img/slide_1.jpg" alt="home-slider-1">
+                    <div class="home-slider__slide__desc">
+                        <p>«История тишины. <br>
+                            Между теплым и холодным» <br>
+                            — кристина агельская 
+                        </p>
+                        <a class="link" href="#">смотреть</a>
+                    </div>
+                </div>
+                <div class="home-slider__slide" data-thumb="img/slide_2.jpg">
+                    <img src="img/slide_2.jpg" alt="home-slider-2">
+                    <div class="home-slider__slide__desc">
+                        <p>«История тишины. <br>
+                            Между теплым и холодным» <br>
+                            — кристина агельская 
+                        </p>
+                        <a class="link" href="#">смотреть</a>
+                    </div>
+                </div>
+                <div class="home-slider__slide" data-thumb="img/slide_3.jpg">
+                    <img src="img/slide_3.jpg" alt="home-slider-3">
+                    <div class="home-slider__slide__desc">
+                        <p>«История тишины. <br>
+                            Между теплым и холодным» <br>
+                            — кристина агельская 
+                        </p>
+                        <a class="link" href="#">смотреть</a>
+                    </div>
+                </div>
+                <div class="home-slider__slide" data-thumb="img/slide_4.jpg">
+                    <img src="img/slide_4.jpg" alt="home-slider-4">
+                    <div class="home-slider__slide__desc">
+                        <p>«История тишины. <br>
+                            Между теплым и холодным» <br>
+                            — кристина агельская 
+                        </p>
+                        <a class="link" href="#">смотреть</a>
+                    </div>
+                </div>
+                <div class="home-slider__slide" data-thumb="img/slide_5.jpg">
+                    <img src="img/slide_5.jpg" alt="home-slider-5">
+                    <div class="home-slider__slide__desc">
+                        <p>«История тишины. <br>
+                            Между теплым и холодным» <br>
+                            — кристина агельская 
+                        </p>
+                        <a class="link" href="#">смотреть</a>
+                    </div>
+                </div>
+                <div class="home-slider__slide" data-thumb="img/slide_6.jpg">
+                    <img src="img/slide_6.jpg" alt="home-slider-6">
+                    <div class="home-slider__slide__desc">
+                        <p>«История тишины. <br>
+                            Между теплым и холодным» <br>
+                            — кристина агельская 
+                        </p>
+                        <a class="link" href="#">смотреть</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-us volblock volblock--text-center">
+            <div class="volblock--text-center__main">
+                <p>Volokno Design Gallery — пространство выверенной селекции, где текстиль ведущих международных домов, авторский дизайн и искусство формируют выразительную среду с вниманием к красоте, атмосфере и человеку.</p>
+            </div>
+            <div class="volblock--text-center__link">
+                <a class="link" href="#">подробнее о нас</a>
+            </div>
+        </div>
+
+        <div class="manufacture">
+            <ul class="manufacture__brands brands-slider">
+                <li><img src="img/brand_1.svg" alt="brands"></li>
+                <li><img src="img/brand_2.svg" alt="brands"></li>
+                <li><img src="img/brand_3.svg" alt="brands"></li>
+                <li><img src="img/brand_4.svg" alt="brands"></li>
+                <li><img src="img/brand_5.svg" alt="brands"></li>
+                <li><img src="img/brand_6.svg" alt="brands"></li>
+            </ul>
+            <div class="manufacture__desc">
+                <p>Мы работаем с текстилем как с важной частью архитектуры интерьера — внимательно подбираем материалы, продумываем детали и сопровождаем проект на всех этапах реализации.</p>
+            </div>
+            <div class="manufacture__link">
+                <a class="link" href="#">наше производство</a>
+            </div>
+        </div>
+
+        <div class="image-block hidden-mobile">
+            <img src="img/manufacture.jpg" alt="manufacture">
+        </div>
+
+        <div class="catalog">
+            <div class="catalog__desc volblock volblock--text-spaced">
+                <div class="volblock--text-spaced__title">каталог</div>
+                <div class="volblock--text-spaced__main">
+                    <p>Малотиражная мебель, предметы коллекционного дизайна и работы современных авторов, формирующие индивидуальный характер пространства.</p>
+                    <div class="volblock--text-spaced__main__link">
+                        <a class="link" href="#">ВЕСЬ КАТАЛОГ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__items">
+                <div class="catalog__items__list products-list products-list--featured featured-slider">
+                    <div class="products-list__item">
+                        <div class="products-list__item__pic">
+                            <a href="product.html">
+                                <img src="img/product_1.jpg" alt="product">
+                            </a>
+                        </div>
+                        <div class="products-list__item__author">
+                            иракли зария 
+                        </div>
+                        <div class="products-list__item__title">
+                            — столик в технике маркетри 
+                        </div>
+                        <div class="products-list__item__price">
+                            800 000 ₽ 
+                        </div>
+                    </div>
+                    <div class="products-list__item">
+                        <div class="products-list__item__pic">
+                            <a href="product.html">
+                                <img src="img/product_2.jpg" alt="product">
+                            </a>
+                        </div>
+                        <div class="products-list__item__author">
+                            иракли зария 
+                        </div>
+                        <div class="products-list__item__title">
+                            — столик в технике маркетри 
+                        </div>
+                        <div class="products-list__item__price">
+                            100 000 ₽
+                        </div>
+                    </div>
+                    <div class="products-list__item">
+                        <div class="products-list__item__pic">
+                            <a href="product.html">
+                                <img src="img/product_3.jpg" alt="product">
+                            </a>
+                        </div>
+                        <div class="products-list__item__author">
+                            кристина агельская 
+                        </div>
+                        <div class="products-list__item__title">
+                            — rust and blue, 2026
+                        </div>
+                        <div class="products-list__item__price">
+                            100 000 ₽
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="projects__desc volblock volblock--text-spaced volblock--text-spaced-padded">
+                <div class="volblock--text-spaced__title">проекты</div>
+                <div class="volblock--text-spaced__main">
+                    <p>Для нас интерьер — это среда, отражающая образ жизни и ценности человека. Поэтому мы работаем не с ассортиментом, а с селекцией: каждый объект обладает характером, смыслом и местом в общей истории пространства.</p>
+                    <div class="volblock--text-spaced__main__link">
+                        <a class="link" href="#">все проекты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-block hidden-mobile">
+            <img src="img/projects.jpg" alt="projects">
+        </div>
+
+        <div class="vol-slider slider-wrapper slider-wrapper--inner home-inner-slider-wrapper hidden-desktop">
+            <div class="slider-placeholder slider-placeholder--inner">
+                <img src="img/home-inner-slide_1.jpg" alt="Загрузка...">
+            </div>
+            <div class="home-inner-slider slider-loading">
+                <div class="home-inner-slider__slide bg-dark" data-thumb="img/home-inner-slide_1.jpg">
+                    <img src="img/home-inner-slide_1.jpg" alt="home-inner-slider-1">
+                </div>
+                <div class="home-inner-slider__slide" data-thumb="img/slide_2.jpg">
+                    <img src="img/slide_2.jpg" alt="home-inner-slider-2">
+                </div>
+                <div class="home-inner-slider__slide" data-thumb="img/slide_3.jpg">
+                    <img src="img/slide_3.jpg" alt="home-inner-slider-3">
+                </div>
+                <div class="home-inner-slider__slide" data-thumb="img/slide_4.jpg">
+                    <img src="img/slide_4.jpg" alt="home-inner-slider-4">
+                </div>
+                <div class="home-inner-slider__slide" data-thumb="img/slide_5.jpg">
+                    <img src="img/slide_5.jpg" alt="home-inner-slider-5">
+                </div>
+                <div class="home-inner-slider__slide" data-thumb="img/slide_6.jpg">
+                    <img src="img/slide_6.jpg" alt="home-inner-slider-6">
+                </div>
+            </div>
+        </div>
+
+        <div class="events">
+            <div class="events__desc volblock volblock--text-spaced volblock--text-spaced-padded">
+                <div class="volblock--text-spaced__title">события</div>
+                <div class="volblock--text-spaced__main">
+                    <p>Volokno объединяет людей, неравнодушных к дизайну, искусству и культуре, создавая среду для вдохновения, диалога и новых идей.</p>
+                    <div class="volblock--text-spaced__main__link">
+                        <a class="link" href="#">все новости</a>
+                    </div>
+                </div>
+            </div>
+            <div class="events__items">
+                <div class="events__items__list news-list news-list--featured news-slider">
+                    <div class="news-list__item">
+                        <div class="news-list__item__type">
+                            <ul class="breadcrumbs-list">
+                                <li>материал</li>
+                                <li>интервью с художником</li>
+                            </ul>
+                        </div>
+                        <div class="news-list__item__pic">
+                            <a href="#">
+                                <img src="img/event_1.jpg" alt="event">
+                            </a>
+                        </div>
+                        <div class="news-list__item__title">
+                            Интервью с Кристиной Агельской о серии «История тишины. Между теплым и холодным»
+                        </div>
+                        <div class="news-list__item__date">
+                            5 апреля 2026
+                        </div>
+                    </div>
+                    <div class="news-list__item">
+                        <div class="news-list__item__type">
+                            <ul class="breadcrumbs-list">
+                                <li>новости</li>
+                                <li>открытие выставки</li>
+                            </ul>
+                        </div>
+                        <div class="news-list__item__pic">
+                            <a href="#">
+                                <img src="img/event_2.jpg" alt="event">
+                            </a>
+                        </div>
+                        <div class="news-list__item__title">
+                            12 апреля — Открытие выставки Кристины Агельской «История тишины. Между теплым и холодным»
+                        </div>
+                        <div class="news-list__item__date">
+                            10 марта 2026
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__blocks">
+            <div class="main-footer__block main-footer__block--contacts">
+                <div class="main-footer__block__title">
+                    Контакты
+                </div>
+                <div class="main-footer__block__body">
+                    <p>
+                        <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
+                        <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
+                    </p>
+                    <p>
+                        Москва, ул. Плющиха, 53/25с1 <br class="hidden-desktop"> этаж 1, <br class="hidden-mobile">
+                        пн-пт с 10:00 до 19:00
+                    </p>
+                    <p>
+                        <a href="#">проложить маршрут</a>
+                    </p>
+                    <p>
+                        <a href="">телеграм-канал</a>
+                    </p>
+                </div>
+            </div>
+            <div class="main-footer__block main-footer__block--documents">
+                <div class="main-footer__block__title">
+                    Документы
+                </div>
+                <div class="main-footer__block__body">
+                    <p>
+                        <a href="#">пользовательское соглашение</a> <br>
+                        <a href="#">Политика конфиденциальности</a> <br>
+                        <a href="#">публичная Оферта</a>
+                    </p>
+                    <p>
+                        ооо “волокно” <br>
+                        ИНН 781697491441 <br>
+                        ОГРН 1227700448315
+                    </p>
+                </div>
+            </div>
+            <div class="main-footer__block main-footer__block--newsletter">
+                <div class="main-footer__block__title">
+                    Подписаться на новости
+                </div>
+                <div class="main-footer__block__body">
+                    <form class="newsletter-form" action="#">
+                        <div class="newsletter-form__fields">
+                            <input type="text" name="email" placeholder="ваш e-mail">
+                            <input type="submit" name="submit" value="оставить заявку">
+                        </div>
+                        <div class="newsletter-form__consent">
+                            Нажимая «Подписаться», вы принимаете нашу <a href="#">Политику конфиденциальности</a>.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer__copyright">
+            © 2026 volokno design
+        </div>
+        <div class="cookies-notice is-open" data-popup="cookies">
+            <p>На сайте используются куки-файлы. Оставаясь на сайте, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a> и <a href="#">обработки персональных данных</a>.</p>
+            <span class="cookies-notice__accept button button--transparent button--bordered" data-popup-close="cookies">согласен</span>
+        </div>
+    </footer>
+</body>
+</html>

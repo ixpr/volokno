@@ -71,46 +71,11 @@ jQuery(document).ready(function ($) {
 
   if (homeInnerSlider.length && isMobileView()) {
     homeInnerSlider.on('init', function(event, slick){
+      $(this).removeClass('slider-loading');
       processSliderImages(homeInnerSlider);
     });
     homeInnerSlider.slick(slickParamsGallery);
   }
-
-
-
-    // 1. Функция для проверки ориентации одной картинки
-  function checkOrientation(imgElement) {
-    const $img = $(imgElement);
-    // Если картинка еще не имеет размеров, пропускаем шаг
-    if (imgElement.naturalWidth === 0 || imgElement.naturalHeight === 0) return;
-
-    if (imgElement.naturalHeight > imgElement.naturalWidth) {
-      $img.addClass('is-vertical').removeClass('is-horizontal');
-    } else {
-      $img.addClass('is-horizontal').removeClass('is-vertical');
-    }
-  }
-
-  // 2. Функция, которая обработает все картинки внутри конкретного слайдера
-  function processSliderImages($sliderElement) {
-    // Ищем картинки внутри слайдера (включая клонированные Slick-ом элементы)
-    const $images = $sliderElement.find('img, .slider-placeholder img');
-
-    $images.each(function () {
-      const imgElement = this;
-
-      if (imgElement.complete) {
-        // Если картинка уже загружена/в кэше
-        checkOrientation(imgElement);
-      } else {
-        // Если картинка на GitHub Pages еще догружается из сети
-        $(imgElement).off('load').on('load', function () {
-          checkOrientation(imgElement);
-        });
-      }
-    });
-  }
-  
 
   const slickParamsAuthors = {
     slidesToShow: 1,
@@ -132,7 +97,7 @@ jQuery(document).ready(function ($) {
 
   // cookies
   /*
-  let cookiesPopup = Cookies.get('ahw_cookies_agree');
+  let cookiesPopup = Cookies.get('cookies_agree');
   if (!cookiesPopup) $(".cookies-popup").removeClass('hidden');
 
   $('.cookies-popup__close').on('click', function() {
@@ -254,7 +219,7 @@ jQuery(document).ready(function ($) {
   }
 
   function setPopupCloseCookie() {
-    Cookies.set( 'ahw_cookies_agree', '1', { path: '/', expires: 365 } );
+    Cookies.set( 'cookies_agree', '1', { path: '/', expires: 365 } );
   }
 
   function checkSlideBg(slick, slideIndex) {
@@ -349,6 +314,33 @@ jQuery(document).ready(function ($) {
 
       }
     }
+  }
+
+  function checkOrientation(imgElement) {
+    const $img = $(imgElement);
+    if (imgElement.naturalWidth === 0 || imgElement.naturalHeight === 0) return;
+
+    if (imgElement.naturalHeight > imgElement.naturalWidth) {
+      $img.addClass('is-vertical').removeClass('is-horizontal');
+    } else {
+      $img.addClass('is-horizontal').removeClass('is-vertical');
+    }
+  }
+
+  function processSliderImages($sliderElement) {
+    const $images = $sliderElement.find('img, .slider-placeholder img');
+
+    $images.each(function () {
+      const imgElement = this;
+
+      if (imgElement.complete) {
+        checkOrientation(imgElement);
+      } else {
+        $(imgElement).off('load').on('load', function () {
+          checkOrientation(imgElement);
+        });
+      }
+    });
   }
 
 });
