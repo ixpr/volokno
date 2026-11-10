@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автор #1</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/slick.min.js" defer></script>
+    <script src="js/jquery.maskedinput.min.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body class="no-logo-mobile">
+    <header class="main-header">
+        <a class="main-header__logo" href="index.html"></a>
+        <div class="main-header__menu">
+            <ul>
+                <li><a href="catalog.html">каталог</a></li>
+                <li><a class="active" href="authors.html">авторы</a></li>
+                <li><a href="projects.html">проекты</a></li>
+                <li><a href="textile.html">текстиль</a></li>
+                <li><a href="news.html">новости</a></li>
+                <li><a href="about.html">о нас</a></li>
+            </ul>
+            <a class="main-header__menu__symbol" href="index.html"></a>
+        </div>
+        <div class="main-header__mobile-header">
+            <a class="main-header__mobile-header__symbol" href="index.html"></a>
+            <span class="main-header__mobile-header__burger" data-menu-open="mobile-menu"></span>
+        </div>
+        <div class="main-header__mobile-menu" data-menu="mobile-menu">
+            <div class="main-header__mobile-menu__header">
+                <span class="main-header__mobile-menu__header__close" data-menu-close></span>
+            </div>
+            <div class="main-header__mobile-menu__body">
+                <div class="main-header__mobile-menu__body__items">
+                    <ul>
+                        <li><a href="about.html">о нас</a></li>
+                        <li><a href="textile.html">текстиль</a></li>
+                        <li><a href="catalog.html">каталог</a></li>
+                        <li><a href="news.html">новости</a></li>
+                        <li><a href="projects.html">проекты</a></li>
+                    </ul>
+                </div>
+                <div class="main-header__mobile-menu__body__contacts">
+                    <p>
+                        <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
+                        <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
+                    </p>
+                    <p>
+                        Москва, ул. Плющиха, 53 с1<br>
+                        пн-пт с 10:00 до 19:00
+                    </p>
+                    <p>
+                        <a href="#">проложить маршрут</a>
+                    </p>
+                    <p>
+                        <a href="">телеграм-канал</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="author-image volblock volblock--image-promo bg-dark">
+            <img src="img/author_promo_1.jpg" alt="author">
+            <ul class="author-image__breadcrumbs breadcrumbs-list">
+                <li>авторы</li>
+                <li>ИРАКЛИЙ ЗАРИЯ</li>
+            </ul>
+        </div>
+        <div class="author-desc volblock volblock--text-spaced volblock--text-spaced-author-desc">
+            <div class="volblock--text-spaced__title">
+                <span>ИРАКЛИЙ ЗАРИЯ</span>
+            </div>
+            <div class="volblock--text-spaced__main">
+                <p>Дизайнер с грузинскими корнями, работающий на пересечении проектирования и коллекционирования. Каждый проект — поиск диалога между предметами разных эпох, где главное не стиль, а ощущение пространства как единого целого.</p>
+                <div class="volblock--text-spaced__main__sm">
+                    <p>Работы художницы экспонировались на международных ярмарках и фестивалях, в том числе Catalog, Арт Москва, Арт Россия, Win-Win,, а также в Турции, Аргентине и Европе. В июне 2024 года в Мадриде состоялась её первая персональная выставка. Работа Кристины «Что я делал, пока медленно учился жить…» находится в коллекции музея AZ.</p>
+                </div>
+            </div>
+        </div>
+        <div class="author-events news-list news-list--featured news-slider">
+            <div class="news-list__item">
+                <div class="news-list__item__type">
+                    <ul class="breadcrumbs-list">
+                        <li>материал</li>
+                        <li>интервью с автором</li>
+                    </ul>
+                </div>
+                <div class="news-list__item__pic">
+                    <a href="#">
+                        <img src="img/author_event_1.jpg" alt="event">
+                    </a>
+                </div>
+                <div class="news-list__item__title">
+                    Интервью с Ираклием Зария о серии «История тишины. Между теплым и холодным»
+                </div>
+                <div class="news-list__item__date">
+                    5 апреля 2026
+                </div>
+            </div>
+            <div class="news-list__item">
+                <div class="news-list__item__type">
+                    <ul class="breadcrumbs-list">
+                        <li>события</li>
+                        <li>образовательная программа</li>
+                    </ul>
+                </div>
+                <div class="news-list__item__pic">
+                    <a href="#">
+                        <img src="img/author_event_2.jpg" alt="event">
+                    </a>
+                </div>
+                <div class="news-list__item__title">
+                    Старт четверого сезона нашего образовательного проекта MUSE
+                </div>
+                <div class="news-list__item__date">
+                    10 марта 2026
+                </div>
+            </div>
+        </div>
+        <div class="author-products volblock volblock--products">
+            <div class="volblock--products__title">
+                <span>каталог автора</span>
+                <a class="volblock--products__title__link-desktop link" href="#">смотреть все</a>
+                <a class="volblock--products__title__link-mobile link padded" href="#">каталог автора</a>
+            </div>
+            <div class="author-products__list products-list products-list--featured featured-slider">
+                <div class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="product.html">
+                            <img src="img/product_1.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        иракли зария 
+                    </div>
+                    <div class="products-list__item__title">
+                        — столик в технике маркетри 
+                    </div>
+                    <div class="products-list__item__price">
+                        800 000 ₽ 
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="product.html">
+                            <img src="img/product_2.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        иракли зария 
+                    </div>
+                    <div class="products-list__item__title">
+                        — столик в технике маркетри 
+                    </div>
+                    <div class="products-list__item__price">
+                        100 000 ₽
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="product.html">
+                            <img src="img/product_3.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        кристина агельская 
+                    </div>
+                    <div class="products-list__item__title">
+                        — rust and blue, 2026
+                    </div>
+                    <div class="products-list__item__price">
+                        100 000 ₽
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="product.html">
+                            <img src="img/product_1.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        иракли зария 
+                    </div>
+                    <div class="products-list__item__title">
+                        — столик в технике маркетри 
+                    </div>
+                    <div class="products-list__item__price">
+                        800 000 ₽ 
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="product.html">
+                            <img src="img/product_2.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        иракли зария 
+                    </div>
+                    <div class="products-list__item__title">
+                        — столик в технике маркетри 
+                    </div>
+                    <div class="products-list__item__price">
+                        100 000 ₽
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="products-list__item__pic">
+                        <a href="product.html">
+                            <img src="img/product_3.jpg" alt="product">
+                        </a>
+                    </div>
+                    <div class="products-list__item__author">
+                        кристина агельская 
+                    </div>
+                    <div class="products-list__item__title">
+                        — rust and blue, 2026
+                    </div>
+                    <div class="products-list__item__price">
+                        100 000 ₽
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="author-projects volblock volblock--projects">
+            <div class="author-projects__title volblock--projects__title">
+                <span>проекты автора</span>
+                <a class="volblock--projects__title__link-desktop link" href="#">смотреть все</a>
+                <a class="volblock--projects__title__link-mobile link padded" href="#">проекты автора</a>
+            </div>
+            <div class="author-projects__slider vol-slider volblock--projects__slider slider-wrapper main-slider-wrapper">
+                <div class="slider-placeholder">
+                    <img src="img/author_projects_slide_1.jpg" alt="Загрузка...">
+                </div>
+                <div class="main-slider slider-loading">
+                    <div class="main-slider__slide" data-thumb="img/author_projects_slide_1.jpg">
+                        <img src="img/author_projects_slide_1.jpg" alt="main-slider-1">
+                    </div>
+                    <div class="main-slider__slide" data-thumb="img/slide_2.jpg">
+                        <img src="img/slide_2.jpg" alt="main-slider-2">
+                    </div>
+                    <div class="main-slider__slide" data-thumb="img/slide_3.jpg">
+                        <img src="img/slide_3.jpg" alt="main-slider-3">
+                    </div>
+                    <div class="main-slider__slide" data-thumb="img/slide_4.jpg">
+                        <img src="img/slide_4.jpg" alt="main-slider-4">
+                    </div>
+                    <div class="main-slider__slide" data-thumb="img/slide_5.jpg">
+                        <img src="img/slide_5.jpg" alt="main-slider-5">
+                    </div>
+                    <div class="main-slider__slide" data-thumb="img/slide_6.jpg">
+                        <img src="img/slide_6.jpg" alt="main-slider-6">
+                    </div>
+                </div>
+            </div>
+            <div class="author-projects__desc volblock--projects__desc volblock volblock--text-spaced volblock--text-spaced-with-sub">
+                <div class="volblock--text-spaced__title">
+                    <i>ираклий зария</i>
+                    <span>Проект двух особняков в Лондоне</span>
+                </div>
+                <div class="volblock--text-spaced__main volblock--text-spaced__main-md">
+                    <p>Два викторианских особняка в лондонском Кенсингтоне, объединённые грузинским архитектором Ираклием Зариа в единое пространство — редкое по масштабу для города, где каждый метр на счету. </p>
+                    <div class="volblock--text-spaced__main__link">
+                        <a href="#" class="link padded-mobile">смотреть проект целиком</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__blocks">
+            <div class="main-footer__block main-footer__block--contacts">
+                <div class="main-footer__block__title">
+                    Контакты
+                </div>
+                <div class="main-footer__block__body">
+                    <p>
+                        <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
+                        <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
+                    </p>
+                    <p>
+                        Москва, ул. Плющиха, 53/25с1 <br class="hidden-desktop"> этаж 1, <br class="hidden-mobile">
+                        пн-пт с 10:00 до 19:00
+                    </p>
+                    <p>
+                        <a href="#">проложить маршрут</a>
+                    </p>
+                    <p>
+                        <a href="">телеграм-канал</a>
+                    </p>
+                </div>
+            </div>
+            <div class="main-footer__block main-footer__block--documents">
+                <div class="main-footer__block__title">
+                    Документы
+                </div>
+                <div class="main-footer__block__body">
+                    <p>
+                        <a href="#">пользовательское соглашение</a> <br>
+                        <a href="#">Политика конфиденциальности</a> <br>
+                        <a href="#">публичная Оферта</a>
+                    </p>
+                    <p>
+                        ооо “волокно” <br>
+                        ИНН 781697491441 <br>
+                        ОГРН 1227700448315
+                    </p>
+                </div>
+            </div>
+            <div class="main-footer__block main-footer__block--newsletter">
+                <div class="main-footer__block__title">
+                    Подписаться на новости
+                </div>
+                <div class="main-footer__block__body">
+                    <form class="newsletter-form" action="#">
+                        <div class="newsletter-form__fields">
+                            <input type="text" name="email" placeholder="ваш e-mail">
+                            <input type="submit" name="submit" value="оставить заявку">
+                        </div>
+                        <div class="newsletter-form__consent">
+                            Нажимая «Подписаться», вы принимаете нашу <a href="#">Политику конфиденциальности</a>.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer__copyright">
+            © 2026 volokno design
+        </div>
+        <div class="cookies-notice hidden">
+            <p>На сайте используются куки-файлы. Оставаясь на сайте, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a> и <a href="#">обработки персональных данных</a>.</p>
+            <span class="cookies-notice__accept button button--transparent button--bordered">согласен</span>
+        </div>
+    </footer>
+</body>
+</html>

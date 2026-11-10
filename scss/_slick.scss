@@ -194,9 +194,6 @@
     @media screen and (max-width: $mobileBkpoint) {
       height: $sliderHeightMobile; 
     }
-    /*@media screen and (min-width: $wideDesktopBkpointMin) {
-      height: $sliderHeightWideDesktop;
-    }*/
   }
   &.slick-initialized {
     opacity: 1;
@@ -206,9 +203,6 @@
     @media screen and (max-width: $mobileBkpoint) {
       height: $sliderHeightMobile; 
     }
-    /*@media screen and (min-width: $wideDesktopBkpointMin) {
-      height: $sliderHeightWideDesktop;
-    }*/
     .slick-list,
     .slick-track {
       height: 100%;
@@ -225,9 +219,6 @@
           max-height: $sliderHeightMobile; 
           height: $sliderHeightMobile; 
         }
-        /*@media screen and (min-width: $wideDesktopBkpointMin) {
-          max-height: $sliderHeightWideDesktop;
-        }*/
         &.is-horizontal {
           object-fit: contain;
         }
@@ -243,9 +234,6 @@
       @media screen and (max-width: $mobileBkpoint) {
         height: $sliderHeightMobileInner; 
       }
-      /*@media screen and (min-width: $wideDesktopBkpointMin) {
-        height: $sliderHeightWideDesktopInner; 
-      }*/
       .slick-slide {
         img {
           max-height: $sliderHeightDesktopInner;
@@ -253,9 +241,6 @@
             max-height: $sliderHeightMobileInner; 
             height: $sliderHeightMobileInner; 
           }
-          /*@media screen and (min-width: $wideDesktopBkpointMin) {
-            max-height: $sliderHeightWideDesktopInner; 
-          }*/
         }
       }
     }
@@ -285,6 +270,17 @@
   &.slick-next {
     transform: translateX(7.5px);
     background-image: url('../img/slider_arrow_right.svg');
+  }
+}
+
+.dark-bg {
+  .slick-arrow {
+    &.slick-prev {
+      background-image: url('../img/slider_arrow_left_white.svg');
+    }
+    &.slick-next {
+      background-image: url('../img/slider_arrow_right_white.svg');
+    }
   }
 }
 
@@ -396,7 +392,7 @@
       padding: 0 10px 0;
       padding-left: 0px;
       img {
-        object-fit: none;
+        object-fit: cover;
         max-height: 442px;
         width: 100%;
         height: auto;
