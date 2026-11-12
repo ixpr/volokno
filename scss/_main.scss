@@ -627,12 +627,12 @@ body.no-logo-mobile {
     padding: 30px 20px;
   }
   .volblock--text-spaced__title {
-    width: 50%;
+    max-width: 50%;
     padding-right: 20px;
     @include font-spectral-large;
     text-transform: uppercase;
     @media screen and (max-width: $mobileBkpoint) {
-      width: 100%;
+      max-width: 100%;
       padding-right: 0;
       margin-bottom: 20px;
     }
@@ -654,9 +654,9 @@ body.no-logo-mobile {
     }
   }
   .volblock--text-spaced__main {
-    width: 50%;
+    max-width: 50%;
     @media screen and (max-width: $mobileBkpoint) {
-      width: 100%;
+      max-width: 100%;
     }
     p {
       @include font-spectral-large;
@@ -719,6 +719,50 @@ body.no-logo-mobile {
     margin: 30px 30px 162px;
     @media screen and (max-width: $mobileBkpoint) {
       margin: 30px 20px 20px;
+    }
+  }
+  &.volblock--text-spaced-pagetitle-lg {
+    display: block;
+    .volblock--text-spaced__title {
+      max-width: 58%;
+      @media screen and (max-width: $mobileBkpoint) {
+        max-width: 100%;
+      }
+      span {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.volblock--text-standart {
+  max-width: 50%;
+  margin: 30px 30px 162px;
+  @media screen and (max-width: $mobileBkpoint) {
+    max-width: 100%;
+    margin: 30px 20px 20px;
+  }
+  p {
+    margin-bottom: 1.5em;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    @media screen and (max-width: $mobileBkpoint) {
+      line-height: 120%;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    i, em {
+      display: inline-block;
+      margin-right: 60px;
+      @include font-monument;
+      transform: translateY(5px);
+      @media screen and (max-width: $mobileBkpoint) {
+        margin-right: 19px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        transform: translateY(5px);
+      }
     }
   }
 }
@@ -795,7 +839,7 @@ body.no-logo-mobile {
   @media screen and (max-width: $mobileBkpoint) {
     width: 100%;
     margin: 0 0 30px;
-    padding: 10px 10px 32px 20px;
+    padding: 10px 10px 60px 20px;
     letter-spacing: -0.02em;
   }
   span {
@@ -808,6 +852,11 @@ body.no-logo-mobile {
       font-size: 12px;
       letter-spacing: 0.08em;
       transform: translateY(5px);
+    }
+  }
+  &.volblock--preview-no-margin {
+    @media screen and (max-width: $mobileBkpoint) {
+      margin-bottom: 0;
     }
   }
 }
@@ -1074,24 +1123,18 @@ body.no-logo-mobile {
 .news-list {
   @include flex-space-start;
   flex-wrap: wrap;
-  gap: 30px 10px;
+  gap: 96px 10px;
   padding: 0 30px;
   @media screen and (max-width: $mobileBkpoint) {
     gap: 0;
-    padding: 30px 0 30px 20px;
+    padding: 0 20px;
   }
-  /*@media screen and (min-width: $wideDesktopBkpointMin) {
-    gap: 1.98vw 0.66vw;
-  }*/
   .news-list__item {
     flex: 0 0 calc(50% - (10px / 2));
     @media screen and (max-width: $mobileBkpoint) {
       flex: 0 0 100%;
       padding: 30px 0;
     }
-    /*@media screen and (min-width: $wideDesktopBkpointMin) {
-      flex: 0 0 calc(50% - (0.66vw / 2));
-    }*/
     .news-list__item__type {
       margin-bottom: 24px;
       @media screen and (max-width: $mobileBkpoint) {
@@ -1123,7 +1166,10 @@ body.no-logo-mobile {
   }
   &.news-list--featured {
     @media screen and (max-width: $mobileBkpoint) {
-      .news-list__item {
+      padding-right: 30px 0 30px 20px;
+    }
+    .news-list__item {
+      @media screen and (max-width: $mobileBkpoint) {
         flex: 0 0 calc(50% - (10px / 2));
       }
     }

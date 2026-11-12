@@ -9,7 +9,6 @@ jQuery(document).ready(function ($) {
   // sliders
   const mainSlider = $('.main-slider');
   const gallerySlider = $('.gallery-slider');
-  const homeInnerSlider = $('.home-inner-slider');
 
   $('.slider-placeholder img')
   .each(function () {
@@ -67,14 +66,6 @@ jQuery(document).ready(function ($) {
       checkSlideBg(slick, nextSlide);
     });
     gallerySlider.slick(slickParamsGallery);
-  }
-
-  if (homeInnerSlider.length && isMobileView()) {
-    homeInnerSlider.on('init', function(event, slick){
-      $(this).removeClass('slider-loading');
-      processSliderImages(homeInnerSlider);
-    });
-    homeInnerSlider.slick(slickParamsGallery);
   }
 
   const slickParamsAuthors = {
@@ -244,19 +235,6 @@ jQuery(document).ready(function ($) {
   }
 
   function manageMobileSliders() {
-    // home inner slider
-    if (homeInnerSlider.length) {
-      if (isMobileView()) {
-        if (!homeInnerSlider.hasClass('slick-initialized')) {
-          homeInnerSlider.slick(slickParamsGallery);
-        }
-      } else {
-        if (homeInnerSlider.hasClass('slick-initialized')) {
-          homeInnerSlider.slick('unslick');
-        }
-      }
-    }
-
     // brands slider
     const slickParamsBrands = {
       slidesToShow: 3,

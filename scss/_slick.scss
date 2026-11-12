@@ -304,6 +304,9 @@
       border-color: #000;
       opacity: 1;
     }
+    &:only-child {
+      display: none;
+    }
     cursor: pointer;
     img {
       max-height: 64px;
