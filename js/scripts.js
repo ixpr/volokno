@@ -8,7 +8,9 @@ jQuery(document).ready(function ($) {
 
   // sliders
   const mainSlider = $('.main-slider');
+  const innerSlider = $('.inner-slider');
   const gallerySlider = $('.gallery-slider');
+  const blockSlider = $('.block-slider');
 
   $('.slider-placeholder img')
   .each(function () {
@@ -56,6 +58,15 @@ jQuery(document).ready(function ($) {
     mainSlider.slick(slickParamsGallery);
   }
 
+  if (innerSlider.length) {
+    innerSlider.on('init', function(event, slick){
+      $(this).removeClass('slider-loading');
+      checkSlideBg(slick, 0, innerSlider);
+      processSliderImages(innerSlider);
+    });
+    innerSlider.slick(slickParamsGallery);
+  }
+
   if (gallerySlider.length) {
     gallerySlider.on('init', function(event, slick){
       $(this).removeClass('slider-loading');
@@ -66,6 +77,15 @@ jQuery(document).ready(function ($) {
       checkSlideBg(slick, nextSlide);
     });
     gallerySlider.slick(slickParamsGallery);
+  }
+
+  if (blockSlider.length) {
+    blockSlider.on('init', function(event, slick){
+      $(this).removeClass('slider-loading');
+      checkSlideBg(slick, 0, blockSlider);
+      processSliderImages(blockSlider);
+    });
+    blockSlider.slick(slickParamsGallery);
   }
 
   const slickParamsAuthors = {
@@ -216,17 +236,27 @@ jQuery(document).ready(function ($) {
     Cookies.set( 'cookies_agree', '1', { path: '/', expires: 365 } );
   }
 
-  function checkSlideBg(slick, slideIndex) {
+  function checkSlideBg(slick, slideIndex, slider = false) {
     var slideElement = $(slick.$slides[slideIndex]);
     if (slideElement.hasClass('bg-dark')) {
-      $('body').addClass('dark-bg');
+      if (!slider) {
+        $('body').addClass('dark-bg');
+      } else {
+        slider.addClass('dark-bg');
+      }
     } else {
-      $('body').removeClass('dark-bg');
+      if (!slider) {
+        $('body').removeClass('dark-bg');
+      } else {
+        slider.removeClass('dark-bg');
+      }
     }
   }
 
   function checkPromoImgBg() {
     var promoImage = $('.volblock--image-promo');
+    if (!promoImage.length) return false;
+
     if (promoImage.hasClass('bg-dark')) {
       $('body').addClass('dark-bg');
     } else {

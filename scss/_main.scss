@@ -86,6 +86,12 @@ a {
       padding: 6px 5px;
     }
   }
+  &.padded-desktop {
+    display: inline-block;
+    @media screen and (min-width: $mobileBkpointMin) {
+      padding: 5px 5px;
+    }
+  }
   &.padded-mobile {
     display: inline-block;
     @media screen and (max-width: $mobileBkpoint) {
@@ -578,7 +584,7 @@ body.no-logo-mobile {
     padding: 60px 20px;
   }
   .volblock--text-center__main {
-    max-width: 950px;
+    max-width: 947px;
     margin: 0 auto;
     @include font-spectral-large;
     text-align: center;
@@ -621,18 +627,18 @@ body.no-logo-mobile {
 
 .volblock--text-spaced {
   @include flex-space-start;
-  padding: 60px 30px 57px;
+  padding: 60px 30px 60px;
   @media screen and (max-width: $mobileBkpoint) {
     display: block;
     padding: 30px 20px;
   }
   .volblock--text-spaced__title {
-    max-width: 50%;
+    width: 50.5%;
     padding-right: 20px;
     @include font-spectral-large;
     text-transform: uppercase;
     @media screen and (max-width: $mobileBkpoint) {
-      max-width: 100%;
+      width: 100%;
       padding-right: 0;
       margin-bottom: 20px;
     }
@@ -654,28 +660,30 @@ body.no-logo-mobile {
     }
   }
   .volblock--text-spaced__main {
-    max-width: 50%;
+    width: 49.5%;
     @media screen and (max-width: $mobileBkpoint) {
-      max-width: 100%;
+      width: 100%;
     }
     p {
       @include font-spectral-large;
     }
     &.volblock--text-spaced__main-md {
       p {
+        max-width: 597px;
         @include font-spectral-small;
         line-height: 140%;
         letter-spacing: -0.02em;
         @media screen and (max-width: $mobileBkpoint) {
+          max-width: 100%;
           line-height: 120%;
         }
       }
     }
     .volblock--text-spaced__main__sm {
-      max-width: 66.6%;
+      width: 66.6%;
       margin: 60px 0 100px;
       @media screen and (max-width: $mobileBkpoint) {
-        max-width: 100%;
+        width: 100%;
         margin: 20px 0 0;
       }
       p {
@@ -690,7 +698,7 @@ body.no-logo-mobile {
   }
   .volblock--text-spaced__main__link {
     @include flex-start-center;
-    margin-top: 33px;
+    margin-top: 40px;
     letter-spacing: 0.08em;
     @media screen and (max-width: $mobileBkpoint) {
       margin-top: 21px;
@@ -703,7 +711,7 @@ body.no-logo-mobile {
   }
   &.volblock--text-spaced-with-sub {
     .volblock--text-spaced__main {
-      padding-top: 35px;
+      padding-top: 32px;
       @media screen and (max-width: $mobileBkpoint) {
         padding-top: 0;
       }
@@ -711,7 +719,7 @@ body.no-logo-mobile {
   }
   &.volblock--text-spaced-author-desc {
     @media screen and (max-width: $mobileBkpoint) {
-      padding: 20px 20px 30px;
+      padding: 15px 20px 30px;
     }
   }
   &.volblock--text-spaced-pagetitle {
@@ -724,9 +732,9 @@ body.no-logo-mobile {
   &.volblock--text-spaced-pagetitle-lg {
     display: block;
     .volblock--text-spaced__title {
-      max-width: 58%;
+      width: 58%;
       @media screen and (max-width: $mobileBkpoint) {
-        max-width: 100%;
+        width: 100%;
       }
       span {
         max-width: 100%;
@@ -736,14 +744,14 @@ body.no-logo-mobile {
 }
 
 .volblock--text-standart {
-  max-width: 50%;
+  max-width: 47.5%;
   margin: 30px 30px 162px;
   @media screen and (max-width: $mobileBkpoint) {
     max-width: 100%;
     margin: 30px 20px 20px;
   }
   p {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.4em;
     line-height: 140%;
     letter-spacing: -0.02em;
     @media screen and (max-width: $mobileBkpoint) {
@@ -754,7 +762,7 @@ body.no-logo-mobile {
     }
     i, em {
       display: inline-block;
-      margin-right: 60px;
+      margin-right: 54px;
       @include font-monument;
       transform: translateY(5px);
       @media screen and (max-width: $mobileBkpoint) {
@@ -840,15 +848,21 @@ body.no-logo-mobile {
     width: 100%;
     margin: 0 0 30px;
     padding: 10px 10px 60px 20px;
-    letter-spacing: -0.02em;
+  }
+  p {
+    @media screen and (max-width: $mobileBkpoint) {
+      letter-spacing: -0.02em;
+      line-height: 120%;
+    }
   }
   span {
     display: inline-block;
-    margin-right: 16px;
+    margin-right: 12px;
     @include font-monument;
     transform: translateY(5px);
     @media screen and (max-width: $mobileBkpoint) {
-      margin-right: 19px;
+      /*margin-right: 19px;*/
+      margin-right: 12px;
       font-size: 12px;
       letter-spacing: 0.08em;
       transform: translateY(5px);
@@ -883,9 +897,11 @@ body.no-logo-mobile {
     top: auto;
     bottom: auto;
     left: 30px;
+    transform: translateY(20px);
     @media screen and (max-width: $mobileBkpoint) {
       position: static;
       margin: 30px 20px 0;
+      transform: none;
     }
   }
   &.volblock--image-promo-project {
@@ -899,16 +915,17 @@ body.no-logo-mobile {
     margin: 0 0 30px;
   }
   .volblock--image-with-caption__pic {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     > img {
       width: 100%;
       height: auto
     }
   }
   .volblock--image-with-caption__text {
-    max-width: 505px;
+    max-width: 470px;
     @include font-monument;
     text-transform: none;
+    letter-spacing: 0.04em;
     @media screen and (max-width: $mobileBkpoint) {
       max-width: calc(100% - 40px);
       margin: 0 20px 0;
@@ -970,6 +987,9 @@ body.no-logo-mobile {
       display: none;
     }
   }
+  .volblock--projects__desc {
+    padding: 30px 30px;
+  }
 }
 
 .volblock--2cols {
@@ -1017,7 +1037,7 @@ body.no-logo-mobile {
   @include flex-start-start;
   @include font-monument;
   li {
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     &:after {
       content: "/";
       margin: 0 0.6em;
@@ -1077,10 +1097,10 @@ body.no-logo-mobile {
 .authors-list {
   @include flex-space-start;
   flex-wrap: wrap;
-  gap: 30px 10px;
+  gap: 17px 10px;
   padding: 0 30px;
   @media screen and (max-width: $mobileBkpoint) {
-    gap: 50px 0;
+    gap: 42px 0;
     padding: 0 20px;
   }
   .authors-list__item {
@@ -1106,11 +1126,12 @@ body.no-logo-mobile {
       }
     }
     .authors-list__item__desc {
-      margin-bottom: 15px;
-      max-width: 378px;
+      margin-bottom: 10px;
+      max-width: 365px;
       text-transform: none;
+      letter-spacing: 0.04em;
       @media screen and (max-width: $mobileBkpoint) {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         letter-spacing: 0.06em;
       }
     }
@@ -1149,6 +1170,10 @@ body.no-logo-mobile {
       img {
         width: 100%;
         height: auto;
+        @media screen and (max-width: $mobileBkpoint) {
+          width: auto;
+          height: 442px;
+        }
       }
     }
     .news-list__item__title {
@@ -1166,7 +1191,7 @@ body.no-logo-mobile {
   }
   &.news-list--featured {
     @media screen and (max-width: $mobileBkpoint) {
-      padding-right: 30px 0 30px 20px;
+      padding: 30px 0 30px 20px;
     }
     .news-list__item {
       @media screen and (max-width: $mobileBkpoint) {
@@ -1428,6 +1453,7 @@ body.no-logo-mobile {
     @media screen and (max-width: $mobileBkpoint) {
       width: 100%;
       padding: 10px 10px 32px 20px;
+      margin-bottom: 24px;
     }
   }
   .catalog-promo__authors {
@@ -1635,6 +1661,9 @@ body.no-logo-mobile {
       @media screen and (max-width: $mobileBkpoint) {
         margin-bottom: 20px;
       }
+      li {
+        letter-spacing: 0.1em;
+      }
     }
     .product-single__main__info {
       max-width: 350px;
@@ -1806,7 +1835,7 @@ body.no-logo-mobile {
 .authors-preview {
   margin-bottom: 128px;
   @media screen and (max-width: $mobileBkpoint) {
-    margin-bottom: 72px;
+    margin-bottom: 42px;
   }
 }
 
@@ -1821,5 +1850,13 @@ body.no-logo-mobile {
   margin-bottom: 160px;
   @media screen and (max-width: $mobileBkpoint) {
     margin-bottom: 0;
+  }
+}
+
+/* news list page */
+
+.news-preview {
+  @media screen and (max-width: $mobileBkpoint) {
+    padding-bottom: 30px;
   }
 }
