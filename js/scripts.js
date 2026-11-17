@@ -64,6 +64,9 @@ jQuery(document).ready(function ($) {
       checkSlideBg(slick, 0, innerSlider);
       processSliderImages(innerSlider);
     });
+    innerSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      checkSlideBg(slick, nextSlide, innerSlider);
+    });
     innerSlider.slick(slickParamsGallery);
   }
 
@@ -84,6 +87,9 @@ jQuery(document).ready(function ($) {
       $(this).removeClass('slider-loading');
       checkSlideBg(slick, 0, blockSlider);
       processSliderImages(blockSlider);
+    });
+    blockSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      checkSlideBg(slick, nextSlide, blockSlider);
     });
     blockSlider.slick(slickParamsGallery);
   }

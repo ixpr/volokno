@@ -116,17 +116,12 @@
   @media screen and (max-width: $mobileBkpoint) {
     min-height: $sliderHeightMobile; 
   }
-  /*@media screen and (min-width: $wideDesktopBkpointMin) {
-    min-height: $sliderHeightWideDesktop; 
-  }*/
-  &.slider-wrapper--inner {
+  &.slider-wrapper--inner,
+  &.slider-wrapper--block {
     min-height: $sliderHeightDesktopInner;
     @media screen and (max-width: $mobileBkpoint) {
       min-height: $sliderHeightMobileInner; 
     }
-    /*@media screen and (min-width: $wideDesktopBkpointMin) {
-      min-height: $sliderHeightWideDesktopInner; 
-    }*/
   }
 }
 
@@ -225,6 +220,9 @@
         }
         &.is-vertical {
           object-fit: contain;
+          @media screen and (max-width: $mobileBkpoint) {
+            object-fit: cover;
+          }
         }
       }
     }
@@ -274,7 +272,8 @@
   }
 }
 
-.dark-bg {
+.inner-slider.dark-bg,
+.block-slider.dark-bg {
   .slick-arrow {
     &.slick-prev {
       background-image: url('../img/slider_arrow_left_white.svg');
@@ -326,10 +325,16 @@
 
 .block-slider.slick-slider {
   &.slick-initialized {
-    height: 900px;
+    height: $sliderHeightDesktopInner;
+    @media screen and (max-width: $mobileBkpoint) {
+      height: $sliderHeightMobileInner; 
+    }
     .slick-slide {
       img {
-        max-height: 900px;
+        max-height: $sliderHeightDesktopInner;
+        @media screen and (max-width: $mobileBkpoint) {
+          max-height: $sliderHeightMobileInner; 
+        }
       }
     }
     .slick-arrow {
