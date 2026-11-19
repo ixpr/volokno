@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новость #1</title>
-    <link rel="stylesheet" href="css/styles.min.css?ver=1.5">
+    <link rel="stylesheet" href="css/styles.min.css?ver=1.7">
     <script src="js/jquery-3.6.0.min.js" defer></script>
     <script src="js/slick.min.js" defer></script>
     <script src="js/jquery.maskedinput.min.js" defer></script>
-    <script src="js/scripts.js?ver=1.5" defer></script>
+    <script src="js/scripts.js?ver=1.7" defer></script>
 </head>
 <body class="top-spaced">
     <header class="main-header">
@@ -36,14 +36,19 @@
             <div class="main-header__mobile-menu__body">
                 <div class="main-header__mobile-menu__body__items">
                     <ul>
-                        <li><a href="about.html">о нас</a></li>
-                        <li><a href="textile.html">текстиль</a></li>
                         <li><a href="catalog.html">каталог</a></li>
-                        <li><a href="news.html">новости</a></li>
+                        <li><a href="authors.html">авторы</a></li>
                         <li><a href="projects.html">проекты</a></li>
+                        <li><a href="textile.html">текстиль</a></li>
+                        <li><a href="news.html">новости</a></li>
+                        <li><a href="about.html">о нас</a></li>
                     </ul>
                 </div>
                 <div class="main-header__mobile-menu__body__contacts">
+                    <ul class="social-icons social-icons--mobmenu">
+                        <li class="social-icons__item social-icons__item--tg"><a href="#" target="_blank"></a></li>
+                        <li class="social-icons__item social-icons__item--phone"><a href="#" target="_blank"></a></li>
+                    </ul>
                     <p>
                         <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
                         <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
@@ -117,7 +122,7 @@
                 <div class="main-footer__block__title">
                     Контакты
                 </div>
-                <div class="main-footer__block__body">
+                                <div class="main-footer__block__body">
                     <p>
                         <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
                         <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
@@ -152,13 +157,14 @@
                 </div>
             </div>
             <div class="main-footer__block main-footer__block--newsletter">
-                <div class="main-footer__block__title">
-                    Подписаться на новости
-                </div>
                 <div class="main-footer__block__body">
+                    <ul class="social-icons">
+                        <li class="social-icons__item social-icons__item--tg"><a href="#" target="_blank"></a></li>
+                        <li class="social-icons__item social-icons__item--phone"><a href="#" target="_blank"></a></li>
+                    </ul>
                     <form class="newsletter-form" action="#">
                         <div class="newsletter-form__fields">
-                            <input type="text" name="email" placeholder="ваш e-mail">
+                            <input type="text" name="phone" placeholder="ваш номер телефона">
                             <input type="submit" name="submit" value="оставить заявку">
                         </div>
                         <div class="newsletter-form__consent">

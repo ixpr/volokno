@@ -3,16 +3,13 @@ jQuery(document).ready(function ($) {
   // set vars
   setProductPageVars();
 
-  // scroll events
-  fixedHeader();
-
   // sliders
   const mainSlider = $('.main-slider');
   const innerSlider = $('.inner-slider');
   const gallerySlider = $('.gallery-slider');
   const blockSlider = $('.block-slider');
 
-  $('.slider-placeholder img')
+  $('.slider-placeholder img, .volblock--image-promo img')
   .each(function () {
     var img = $(this);
 
@@ -179,22 +176,42 @@ jQuery(document).ready(function ($) {
   });
 
   // masked input
-  $('#req_phone').mask('+7 (999) 999-9999');
+  $('#req_phone, [name="phone"]').mask('+7 (999) 999-9999');
 
   /**
   * General events
   */
 
-  // on scroll
-  window.onscroll = function() {
-    // fix header
-    fixedHeader();
-  };
+  // fixed header on scroll
+  let lastScrollTop = 0;
+  const delta = 5;
+  const $body = $('body');
+
+  $(window).on('scroll', function() {
+    let currentScroll = $(this).scrollTop();
+
+    if (currentScroll > 0) {
+      $body.addClass('header-fixed');
+    } else {
+      $body.removeClass('header-fixed');
+    }
+
+    if (Math.abs(lastScrollTop - currentScroll) <= delta) {
+      return;
+    }
+
+    if (currentScroll < lastScrollTop && currentScroll > 0) {
+      $body.addClass('scroll-up');
+    } else {
+      $body.removeClass('scroll-up');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
 
   // on resize
   window.addEventListener('resize', function(event) {
     setProductPageVars();
-    fixedHeader();
   }, true);
 
   let resizeTimeout;
@@ -223,19 +240,6 @@ jQuery(document).ready(function ($) {
 
   function isTabletView() {
     return window.innerWidth <= 1099;
-  }
-
-  function fixedHeader() {
-    let startPoint = 0;
-    if ($('#wpadminbar').length) {
-      startPoint += $('#wpadminbar').outerHeight();
-    }
-    
-    if (window.scrollY > startPoint) {
-      window.document.body.classList.add('header-fixed');
-    } else {
-      window.document.body.classList.remove('header-fixed');
-    }
   }
 
   function setPopupCloseCookie() {

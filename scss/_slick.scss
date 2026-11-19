@@ -152,9 +152,15 @@
     &.is-horizontal {
       object-fit: contain;
       height: 100%;
+      @media screen and (min-width: $mobileBkpointMin) {
+        object-fit: cover;
+      }
     }
     &.is-vertical {
-      object-fit: cover;
+      object-fit: contain;
+      @media screen and (max-width: $mobileBkpoint) {
+        object-fit: cover;
+      }
     }
   }
   &.slider-placeholder--inner {
@@ -217,6 +223,9 @@
         }
         &.is-horizontal {
           object-fit: contain;
+          @media screen and (min-width: $mobileBkpointMin) {
+            object-fit: cover;
+          }
         }
         &.is-vertical {
           object-fit: contain;
@@ -343,6 +352,28 @@
       }
       &.slick-next {
         background-image: url('../img/slider_arrow_right.svg');
+      }
+    }
+  }
+}
+
+.volblock--2cols .block-slider.slick-slider {
+  &.slick-initialized {
+    .slick-slide {
+      img {
+        &.is-horizontal {
+          object-fit: contain;
+          height: 100%;
+          @media screen and (min-width: $mobileBkpointMin) {
+            object-fit: contain;
+          }
+        }
+        &.is-vertical {
+          object-fit: contain;
+          @media screen and (max-width: $mobileBkpoint) {
+            object-fit: cover;
+          }
+        }
       }
     }
   }

@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Автор #1</title>
-    <link rel="stylesheet" href="css/styles.min.css?ver=1.5">
+    <link rel="stylesheet" href="css/styles.min.css?ver=1.7">
     <script src="js/jquery-3.6.0.min.js" defer></script>
     <script src="js/slick.min.js" defer></script>
     <script src="js/jquery.maskedinput.min.js" defer></script>
-    <script src="js/scripts.js?ver=1.5" defer></script>
+    <script src="js/scripts.js?ver=1.7" defer></script>
 </head>
 <body class="no-logo-mobile">
     <header class="main-header">
@@ -36,14 +36,19 @@
             <div class="main-header__mobile-menu__body">
                 <div class="main-header__mobile-menu__body__items">
                     <ul>
-                        <li><a href="about.html">о нас</a></li>
-                        <li><a href="textile.html">текстиль</a></li>
                         <li><a href="catalog.html">каталог</a></li>
-                        <li><a href="news.html">новости</a></li>
+                        <li><a href="authors.html">авторы</a></li>
                         <li><a href="projects.html">проекты</a></li>
+                        <li><a href="textile.html">текстиль</a></li>
+                        <li><a href="news.html">новости</a></li>
+                        <li><a href="about.html">о нас</a></li>
                     </ul>
                 </div>
                 <div class="main-header__mobile-menu__body__contacts">
+                    <ul class="social-icons social-icons--mobmenu">
+                        <li class="social-icons__item social-icons__item--tg"><a href="#" target="_blank"></a></li>
+                        <li class="social-icons__item social-icons__item--phone"><a href="#" target="_blank"></a></li>
+                    </ul>
                     <p>
                         <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
                         <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
@@ -81,43 +86,38 @@
                 </div>
             </div>
         </div>
-        <div class="author-events news-list news-list--featured news-slider">
-            <div class="news-list__item">
-                <div class="news-list__item__type">
-                    <ul class="breadcrumbs-list">
-                        <li>материал</li>
-                        <li>интервью с автором</li>
-                    </ul>
-                </div>
-                <div class="news-list__item__pic">
-                    <a href="#">
-                        <img src="img/author_event_1.jpg" alt="event">
-                    </a>
-                </div>
-                <div class="news-list__item__title">
-                    Интервью с Ираклием Зария о серии «История тишины. Между теплым и холодным»
-                </div>
-                <div class="news-list__item__date">
-                    5 апреля 2026
-                </div>
+        <div class="author-events volblock volblock--events">
+            <div class="volblock--events__title">
+                <span>новости автора</span>
+                <a class="volblock--events__title__link-desktop link" href="#">смотреть все</a>
+                <a class="volblock--events__title__link-mobile link padded" href="#">новости автора</a>
             </div>
-            <div class="news-list__item">
-                <div class="news-list__item__type">
-                    <ul class="breadcrumbs-list">
-                        <li>события</li>
-                        <li>образовательная программа</li>
-                    </ul>
+            <div class="author-events__list news-list news-list--featured news-slider">
+                <div class="news-list__item">
+                    <div class="news-list__item__pic">
+                        <a href="#">
+                            <img src="img/author_event_1.jpg" alt="event">
+                        </a>
+                    </div>
+                    <div class="news-list__item__title">
+                        Интервью с Ираклием Зария о серии «История тишины. Между теплым и холодным»
+                    </div>
+                    <div class="news-list__item__date">
+                        5 апреля 2026
+                    </div>
                 </div>
-                <div class="news-list__item__pic">
-                    <a href="#">
-                        <img src="img/author_event_2.jpg" alt="event">
-                    </a>
-                </div>
-                <div class="news-list__item__title">
-                    Старт четверого сезона нашего образовательного проекта MUSE
-                </div>
-                <div class="news-list__item__date">
-                    10 марта 2026
+                <div class="news-list__item">
+                    <div class="news-list__item__pic">
+                        <a href="#">
+                            <img src="img/author_event_2.jpg" alt="event">
+                        </a>
+                    </div>
+                    <div class="news-list__item__title">
+                        Старт четверого сезона нашего образовательного проекта MUSE
+                    </div>
+                    <div class="news-list__item__date">
+                        10 марта 2026
+                    </div>
                 </div>
             </div>
         </div>
@@ -277,7 +277,7 @@
                 <div class="main-footer__block__title">
                     Контакты
                 </div>
-                <div class="main-footer__block__body">
+                                <div class="main-footer__block__body">
                     <p>
                         <a href="tel:+74952050304">+7 (495) 205-03-04</a> <br>
                         <a href="mailto:hello@voloknodesign.ru">hello@voloknodesign.ru</a>
@@ -312,13 +312,14 @@
                 </div>
             </div>
             <div class="main-footer__block main-footer__block--newsletter">
-                <div class="main-footer__block__title">
-                    Подписаться на новости
-                </div>
                 <div class="main-footer__block__body">
+                    <ul class="social-icons">
+                        <li class="social-icons__item social-icons__item--tg"><a href="#" target="_blank"></a></li>
+                        <li class="social-icons__item social-icons__item--phone"><a href="#" target="_blank"></a></li>
+                    </ul>
                     <form class="newsletter-form" action="#">
                         <div class="newsletter-form__fields">
-                            <input type="text" name="email" placeholder="ваш e-mail">
+                            <input type="text" name="phone" placeholder="ваш номер телефона">
                             <input type="submit" name="submit" value="оставить заявку">
                         </div>
                         <div class="newsletter-form__consent">
